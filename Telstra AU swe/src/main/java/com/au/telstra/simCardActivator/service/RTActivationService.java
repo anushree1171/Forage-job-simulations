@@ -12,7 +12,7 @@ public class RTActivationService {
 
     RestTemplate restTemplate;
 
-    private String actuationUrl;
+    private final String actuationUrl;
 
     public RTActivationService(){
         this.restTemplate = new RestTemplate();
@@ -31,8 +31,4 @@ public class RTActivationService {
         System.out.println("Activation Service:");
         System.out.println(response);
     }
-
-
-
-
 }

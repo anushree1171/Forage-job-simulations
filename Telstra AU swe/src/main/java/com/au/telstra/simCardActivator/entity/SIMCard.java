@@ -1,6 +1,5 @@
 package com.au.telstra.simCardActivator.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 

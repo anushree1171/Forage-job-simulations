@@ -2,12 +2,9 @@ package com.au.telstra.simCardActivator.controller;
 
 import com.au.telstra.simCardActivator.dto.SIMCardDto;
 import com.au.telstra.simCardActivator.entity.SIMCard;
-import com.au.telstra.simCardActivator.service.RTActivationService;
 import com.au.telstra.simCardActivator.service.SIMCardService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -17,16 +14,12 @@ public class APIController {
 
     @Autowired
     SIMCardService simCardService;
-    //do one rest template post for entity and send json payload to activation-controller
-
 
     @PostMapping("/save")
     public void saveSIMCard(@RequestBody SIMCard simCard){
         simCardService.saveSimCard(simCard);
         simCardService.postToActivate(simCard);
     }
-
-    //@PostMapping("/saveAll")
 
     @GetMapping("/getById/{id}")
     public SIMCardDto getSIMById(@PathVariable("id") int id){
