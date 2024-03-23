@@ -1,4 +1,4 @@
-##Sim Card Activation
+Sim Card Activation
 
 This Java code implements a REST service for activating SIM cards. 
 The controller receives activation requests via the "/activate" endpoint, then utilizes REST templates to forward JSON data to another service located at "/actuate" for SIM card activation. 
